@@ -1,2 +1,1 @@
-# py_gradientDesent
-gradient descent parameter estimation for simple linear regression
+Gradient Descent Algoritm in Python for estimating Simple Liear Regressian Parameters 
