@@ -1,7 +1,10 @@
 import numpy as np
-import matplotlib.pyplot as plt
-import matplotlib.animation as animation
 
+import matplotlib.animation as animation
+import matplotlib
+
+
+import matplotlib.pyplot as plt
 
 
 class gradintDescentVisualization():
@@ -19,11 +22,10 @@ class gradintDescentVisualization():
 
         self.x = np.array([1,2,2.5,3,4,5,6,7,8,9,10])
         self.y =np.array([4,4,6,7,8,7,10,9,12,11,14])
-        self.theta_0 = 4
-        self.theta_1 = 2
+        self.theta_0 = 8
+        self.theta_1 = 0.5
         self.alpha = 0.01
         self.axis.scatter(self.x,self.y)
-        self.finfo = plt.gcf()
 
 
 
@@ -41,13 +43,15 @@ class gradintDescentVisualization():
 
            self.theta_0 = self.theta_0 -  cb
            self.theta_1 = self.theta_1 - cm
-           a = self.axis.plot(self.x,model)
+           self.axis.plot(self.x,model)
+           self.axis.set_title(r'\TeX y = {} + {} * x'.format(self.theta_0,self.theta_1))
 
 
 
 
      def  animate(self):
-         anime = animation.FuncAnimation(self.fig,self.gradientdesent,interval = 1000)
+         anime = animation.FuncAnimation(self.fig,self.gradientdesent,interval = 1)
+
          plt.show()
 
 
