@@ -1,3 +1,5 @@
+import numpy
+
 class gradientDesent():
     def __init__(self):
        
