@@ -1,20 +1,45 @@
 import numpy as np
+import matplotlib.pyplot as plt
+import matplotlib.animation as animation
+
 
 class gradientDesent():
     def __init__(self):
         """
+            The graidient descent Algorithm is using for estimate parameter
+
+            in this code it estimates a simple Linear Regression Parameters( y = b_0 + b1*X)
+
+
+            =====================
+            ::parameter
+                x : regressor Variable of trainig Data
+                y : predictor Variable of trainig Data
+
+            ::return
+                theata_0 : estimated theta 0 ,
+
+                theta_1  : estimated theta 1
+
+            ===============
+
 
 
 
 
         """
+
+        self.fig = plt.figure()
+        self.ax = self.fig.add_subplot(111)
+        self.x = np.array([1 ,2,3,4])
+        self.y =  np.array([2,4,6,8])
         pass
 
 
     def gradientDisent(self):
 
-        x = np.array([1 ,2,3,4]) #  x as regressor
-        y = np.array([2,4,6,8])  #  y as pridictor
+        x = self.x #  x as regressor
+        y =self.y  #  y as pridictor
        
         theata_1 = 2                 
         theata_0 = 4
@@ -31,7 +56,9 @@ class gradientDesent():
             theata_1 = theata_1 - cm
             
         print(theata_0,theata_1)
-       
+
 
 grd = gradientDesent()
+
 grd.gradientDisent()
+
