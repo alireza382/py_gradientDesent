@@ -2,7 +2,12 @@ import numpy as np
 
 class gradientDesent():
     def __init__(self):
-       
+        """
+
+
+
+
+        """
         pass
 
 
@@ -12,20 +17,20 @@ class gradientDesent():
         y = np.array([2,4,6,8])  #  y as pridictor
        
         theata_1 = 2                 
-        theta_0 = 4
+        theata_0 = 4
         alpha = 0.01
         itrator = 10000   
-       
+        n = len(x)
         for i in range(itrator):
-            model = t0 + t1*x
+            model = theata_0 + theata_1*x
 
-            cb = (1/4)*alpha* np.sum(model - y)  # derivitive of cost fumction for thetha_0
-            cm = (1/4)* alpha * np.sum((model -y)*x)# derivitive of cost fumction for thetha_1
+            cb = (1/n)*alpha* np.sum(model - y)  # derivitive of cost fumction for thetha_0
+            cm = (1/n)* alpha * np.sum((model -y)*x)# derivitive of cost fumction for thetha_1
            
             theata_0 = theata_0 - cb
             theata_1 = theata_1 - cm
             
-        print(t0,t1)
+        print(theata_0,theata_1)
        
 
 grd = gradientDesent()
