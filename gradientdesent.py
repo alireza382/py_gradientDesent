@@ -62,3 +62,4 @@ grd = gradientDesent()
 
 grd.gradientDisent()
 
+gogorimagor = 'magorigogi'
