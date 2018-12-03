@@ -63,4 +63,3 @@ grd = gradientDesent()
 grd.gradientDisent()
 
 
-A = 'Test_a'
